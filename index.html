@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InsightForge Analytics - Home</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(15,23,42,0.7);
+    padding: 18px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background:
+    linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.85)),
+    url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+    color: #cbd5e1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(14,165,233,0.4);
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+
+/* FEATURES GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 14px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #334155;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+/* STATS */
+.stats {
+    background: #020617;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.stat h2 {
+    font-size: 40px;
+    color: #38bdf8;
+}
+
+.stat p {
+    color: #94a3b8;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* MAP */
+.map-section {
+    padding: 80px 20px;
+    background: #0f172a;
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 350px;
+    border-radius: 14px;
+    border: none;
+    margin-top: 30px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+    font-size: 14px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 34px;
+    }
+    nav ul {
+        gap: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="product.html">Products</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Engineering Intelligence. Empowering Decisions.</h1>
+<p>
+InsightForge Analytics transforms complex enterprise data into
+predictive, actionable intelligence powered by AI.
+</p>
+<a href="contact.html" class="btn">Start Your Free Consultation</a>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Our Capabilities</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80">
+<h3>AI & Predictive Modeling</h3>
+<p>Advanced machine learning systems that forecast trends and uncover hidden growth opportunities.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=800&q=80">
+<h3>Executive Dashboards</h3>
+<p>Custom KPI dashboards designed for clarity, speed, and strategic decision-making.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=800&q=80">
+<h3>Operational Intelligence</h3>
+<p>Real-time monitoring systems that ensure efficiency, scalability, and resilience.</p>
+</div>
+
+</div>
+</section>
+
+<section class="stats">
+<div class="stats-grid">
+<div class="stat">
+<h2>99.9%</h2>
+<p>System Uptime</p>
+</div>
+<div class="stat">
+<h2>250+</h2>
+<p>Enterprise Clients</p>
+</div>
+<div class="stat">
+<h2>40%</h2>
+<p>Average Efficiency Increase</p>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Ready to Transform Your Data Strategy?</h2>
+<a href="product.html" class="btn">Explore Our Products</a>
+</section>
+
+<section class="map-section">
+<h2>Visit Our Headquarters</h2>
+<iframe
+src="https://www.google.com/maps?q=182%20George%20St%20Sydney%20NSW%202000%20Australia&output=embed"
+loading="lazy">
+</iframe>
+</section>
+
+<footer>
+<p>&copy; 2026 InsightForge Analytics | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

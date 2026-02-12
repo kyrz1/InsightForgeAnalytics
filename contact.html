@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InsightForge Analytics - Contact</title>
+
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#0f172a; color:#e2e8f0; line-height:1.6;}
+header {position:fixed; width:100%; top:0; backdrop-filter:blur(10px); background:rgba(15,23,42,0.75); padding:18px 0; z-index:1000;}
+nav ul {display:flex; justify-content:center; gap:50px; list-style:none;}
+nav a {color:white; text-decoration:none; font-weight:600; transition:0.3s;}
+nav a:hover {color:#38bdf8;}
+.active {color:#38bdf8;}
+
+/* HERO */
+.hero {height:50vh; background:linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.85)), url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"); background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; margin-top:60px;}
+.hero-content {max-width:800px;}
+.hero h1 {font-size:44px; margin-bottom:15px;}
+.hero p {font-size:20px; color:#cbd5e1;}
+
+/* SECTIONS */
+.section {padding:80px 20px; max-width:1200px; margin:auto;}
+.section-title {text-align:center; font-size:34px; margin-bottom:60px;}
+
+/* CONTACT GRID */
+.grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:40px;}
+.card {background:#1e293b; padding:30px; border-radius:16px; transition:0.4s; text-align:center; display:flex; flex-direction:column; justify-content:flex-start; min-height:380px;}
+.card:hover {transform:translateY(-8px); background:#334155;}
+.card h3 {margin-bottom:15px; color:#38bdf8;}
+.card p, .card li {color:#cbd5e1; font-size:16px; margin-bottom:10px; list-style:none;}
+
+/* AI CARD */
+.ai-card {min-height:480px; display:flex; flex-direction:column; justify-content:space-between;}
+.chat-box {background:#0f172a; flex-grow:1; border:1px solid #334155; border-radius:12px; padding:15px; margin-bottom:15px; overflow-y:auto; max-height:220px;}
+.message {margin-bottom:10px; font-size:15px;}
+.message.user {text-align:right; color:#38bdf8;}
+.message.bot {text-align:left; color:#a5b4fc;}
+
+/* FORM INSIDE AI CARD */
+.ai-card form {display:flex; flex-direction:column; gap:10px;}
+.ai-card input, .ai-card textarea {padding:10px; border-radius:8px; border:none; font-size:14px; width:100%;}
+.ai-card button {padding:12px; background:linear-gradient(90deg,#38bdf8,#0ea5e9); color:white; font-weight:bold; border:none; border-radius:8px; cursor:pointer; transition:0.3s;}
+.ai-card button:hover {transform:translateY(-3px); box-shadow:0 10px 25px rgba(14,165,233,0.4);}
+
+/* MAP */
+.map-section {padding:60px 20px; text-align:center;}
+iframe {width:100%; max-width:1000px; height:350px; border-radius:14px; border:none; margin-top:30px;}
+
+/* CTA */
+.cta {background:linear-gradient(90deg,#0ea5e9,#6366f1); padding:80px 20px; text-align:center;}
+
+/* FOOTER */
+footer {text-align:center; padding:30px; background:#020617; font-size:14px;}
+
+@media (max-width:768px){.hero h1{font-size:32px;}}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="product.html">Products</a></li>
+<li><a href="contact.html" class="active">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Contact & Support</h1>
+<p>We’re here to help you unlock the full potential of your data.</p>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Get in Touch</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Email Support</h3>
+<p>support@insightforge.com</p>
+<p>Response typically within 24 hours</p>
+</div>
+
+<div class="card">
+<h3>Sales Inquiries</h3>
+<p>sales@insightforge.com</p>
+<p>Customized demos & pricing</p>
+</div>
+
+<div class="card">
+<h3>Call Us</h3>
+<p>+1 (800) 555-0142</p>
+<p>Mon–Fri, 9 AM–7 PM (EST)</p>
+</div>
+
+<div class="card ai-card">
+<h3>24/7 AI Assistant</h3>
+<div class="chat-box" id="chatBox">
+<div class="message bot">Hi! I’m here to help. Fill out your info and we’ll escalate your request immediately.</div>
+</div>
+<form id="aiForm">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" rows="3" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Visit Our Headquarters</h2>
+<div class="map-section">
+<iframe
+src="https://www.google.com/maps?q=182%20George%20St%20Sydney%20NSW%202000%20Australia&output=embed"
+loading="lazy">
+</iframe>
+</div>
+</section>
+
+<section class="cta">
+<h2>Need Personalized Assistance?</h2>
+<p>Schedule a consultation or request a demo with one of our analytics experts.</p>
+<br>
+<a href="contact.html" class="btn">Schedule a Demo</a>
+</section>
+
+<footer>
+<p>&copy; 2026 InsightForge Analytics | All Rights Reserved</p>
+</footer>
+
+<script>
+const chatBox = document.getElementById('chatBox');
+document.getElementById('aiForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+
+    // Show user's message
+    const userMsg = document.createElement('div');
+    userMsg.className = 'message user';
+    userMsg.textContent = message;
+    chatBox.appendChild(userMsg);
+
+    // Scroll to bottom
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    // Immediate escalation response
+    const botMsg = document.createElement('div');
+    botMsg.className = 'message bot';
+    botMsg.textContent = `Thank you, ${name}. Your message has been received and escalated to our support team. Someone will reach out to you shortly.`;
+    chatBox.appendChild(botMsg);
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    // Clear form
+    document.getElementById('aiForm').reset();
+});
+</script>
+
+</body>
+</html>
